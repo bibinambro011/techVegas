@@ -1,0 +1,55 @@
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <a [routerLink]="['/home']" class="text-xl font-bold text-gray-900"> <img
+                src="https://media.istockphoto.com/id/1412901513/vector/modern-hand-technology-logo-design.jpg?s=612x612&w=0&k=20&c=zZ4Kh-J2BV_oLfx8Tfd65aUFdTNlCvjmWxLOT4sEeVs="
+                style="max-width: 60px; max-height: 60px;"> </a>
+
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <!-- Add more navigation items here if needed -->
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="relative">
+            <input type="text" placeholder="Search products" [(ngModel)]="inputvalue"
+              (keyup)="searchProduct(inputvalue)"
+              class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:border-gray-300">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.9 14.32a7.5 7.5 0 111.414-1.414l3.856 3.857a1 1 0 01-1.414 1.414l-3.856-3.857zM7.5 13a5.5 5.5 0 100-11 5.5 5.5 0 000 11z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+          <div class="ml-4 relative">
+            <button
+              class="bg-white flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300"
+              id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+              <span class="sr-only">Open user menu</span>
+              <img class="h-8 w-8 rounded-full"
+                src="https://chetanyacareers.com/events/wp-content/uploads/2017/10/speaker3-min.jpg" alt="" (click)="profilepage()">
+            </button>
+          </div>
+          <div class="ml-4 relative">
+            <button
+              class="bg-white p-1 rounded-full text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+              <span class="sr-only">View cart</span>
+              <i class="fa-regular fa-heart fa-2x"></i>
+
+              <span
+                class="absolute top-0 right-0 inline-block w-5 h-5 bg-red-600 text-white text-xs font-bold rounded-full text-center">{{cartProductCount}}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+
+<i class="fa-regular fa-cart-shopping-fast"></i>
